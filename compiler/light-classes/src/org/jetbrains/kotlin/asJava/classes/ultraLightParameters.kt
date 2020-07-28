@@ -213,9 +213,6 @@ internal class KtUltraLightReceiverParameter(
 
     override fun isVarArgs(): Boolean = false
 
-    override val givenAnnotations: List<KtLightAbstractAnnotation>?
-        get() = tryGetContainingDescriptor()?.extensionReceiverParameter?.obtainLightAnnotations(support, this)
-
     override fun tryGetKotlinType(): KotlinType? =
         tryGetContainingDescriptor()?.extensionReceiverParameter?.type
 }
